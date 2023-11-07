@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+/* Estilos Generales */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+nav a {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+/* Estilos para el Netvar */
+.navbar {
+    background-color: #eac926;
+    color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 40%;
+}
+
+.logo img {
+    max-width: 90%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar input {
+    position: relative;
+    z-index: 915;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    font-family: inherit;
+    border-radius: 2px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+    height: 40px;
+    width: 100%;
+    padding: 10px 60px 10px 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 1.5px;
+}
+
+.search-bar button {
+    position: absolute;
+    z-index: 920;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #666;
+    line-height: 1em;
+    border-radius: 0 2px 2px 0;
+    width: 46px;
+    right: 0;
+    left: auto;
+    background-image: none;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+.cta {
+    color: #03264C;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cta svg {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cta p {
+    display: inline-block;
+}
+
+.burger-menu {
+    justify-content: center;
+    display: flex;
+    width: 100vw;
+    margin-top: 15px;
+}
+
+.burger-menu i {
+    background-color: #096bd3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#menu-icon {
+    color: white;
+}
+
+.login-bar a {
+    text-decoration: none;
+    color: #03264C;
+    margin: 0 10px;
+    display: none;
+}
+
+.login-bar svg {
+    display: none;
+}
+
+/* Estilos para el banner */
+.banner {
+    text-align: center;
+}
+
+.home-banner {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para main */
+.main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.main h1 {
+    font-size: 24px;
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-article {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    margin: 5px;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.product{
+    position: relative;
+}
+
+.product-image {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.main-article img {
+    max-width: 100%;
+}
+
+.product-info {
+    display: flex;
+    border-top: 1px solid #ebebeb;
+    padding-top: 10px;
+    position: relative;
+}
+
+.product-info .truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount {
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+.main-article .description {
+    color: #666;
+    white-space: nowrap;
+}
+
+.footer-main {
+    text-align: center;
+}
+
+b {
+    font-weight: bold;
+}
+
+p {
+    margin: 10px; 
+}
+
+.copyright {
+    text-align: left;
+}
+
+.blue-icon {
+    font-size: 24px;
+    color: blue;
+}
+
+/* Estilos para la versión tablet (dos artículos por fila) */
+@media (min-width: 768px) {
+    .main-article {
+        width: calc(50% - 10px);
+    }
+
+    .logo {
+        width: 33%;
+    }
+
+    .search-container {
+        width: 33%;
+    }
+
+    .search-bar button {
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        margin-left: 2px;
+    }
+
+
+    .cta {
+        width: 33%;
+    }
+
+    .burger-menu {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .burger-menu i {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .header .burger-menu ul li {
+        float: left;
+        position: absolute;
+    }
+
+    /* Estilos especificos Menu*/
+    .navbar .burger-menu ul li a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        transition: all .2s ease;
+    }
+
+    .navbar .burger-menu ul li ul li {
+        width: 50%;
+    }
+
+    .navbar .burger-menu ul li:hover>ul {
+        display: initial;
+    }
+
+    .login-bar {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .login-bar a {
+        text-decoration: none;
+        color: #03264C;
+        display: block;
+
+    }
+
+    .login-bar svg {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .main-article {
+        width: calc(25% - 10px);
+    }
+}
+
+i.fas.fa-bars {
+    font-size: 30px;
+}
