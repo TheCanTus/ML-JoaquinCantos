@@ -6,7 +6,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
+    font-size: 12px; /* Tamaño de texto predeterminado */
 }
+
+/*------------------------------------------------------------------------------------------------------------------------------
+                                  HEADER
+-------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Estilos Generales */
 nav ul {
@@ -139,128 +144,82 @@ nav a {
     display: none;
 }
 
-/* Estilos para el banner */
-.banner {
-    text-align: center;
-}
-
-.home-banner {
-    width: 100%;
-    height: auto;
-}
-
-/* Estilos para main */
-.main {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 15px 0;
-}
-
-.main h1 {
-    font-size: 24px;
-    display: flex;
-    margin-bottom: 5px;
-    margin-top: 5px;
-
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.main-article {
-    width: calc(100% - 10px);
-    margin-bottom: 10px;
-    margin: 5px;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
+/* Estilos para el formulario de registro */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
     background-color: #fff;
-    display: flex;
-    align-items: center;
-}
-.product{
-    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-image {
-    max-width: 100px;
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form select {
+    height: 40px;
+}
+
+form input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+form input[type="file"] {
+    margin-top: 6px;
+}
+
+/* Estilo para los botones */
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #096bd3;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #0a57a9;
+}
+
+form label[for="electro"],
+form label[for="moda"],
+form label[for="hogar"],
+form label[for="jugueteria"],
+form label[for="vida_sana"] {
+    display: inline-block;
     margin-right: 10px;
 }
 
-.main-article img {
-    max-width: 100%;
+form input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
 }
 
-.product-info {
-    display: flex;
-    border-top: 1px solid #ebebeb;
-    padding-top: 10px;
-    position: relative;
-}
-
-.product-info .truck {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-.price {
-    font-size: 18px;
-    width: 30%;
-}
-
-.discount {
-    font-size: 16px;
-    color: #39b54a;
-    width: 70%;
-}
-
-.description {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-
-
-.main-article .description {
-    color: #666;
-    white-space: nowrap;
-}
-
-.footer-main {
-    text-align: center;
-}
-
-b {
-    font-weight: bold;
-}
-
-p {
-    margin: 10px; 
-}
-
-.copyright {
-    text-align: left;
-}
-
-.blue-icon {
-    font-size: 24px;
-    color: blue;
-}
-
-/* Estilos para la versión tablet (dos artículos por fila) */
+/* Estilos para la versión tablet*/
 @media (min-width: 768px) {
     .main-article {
         width: calc(50% - 10px);
@@ -332,12 +291,6 @@ p {
         display: block;
     }
 
-}
-
-@media (min-width: 1024px) {
-    .main-article {
-        width: calc(25% - 10px);
-    }
 }
 
 i.fas.fa-bars {

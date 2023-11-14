@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/register.css">
-    <title>Registro</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
 </head>
+
 <body>
 
     <header class="navbar">
@@ -51,7 +53,7 @@
                 <path
                     d="M528 160V416c0 8.8-7.2 16-16 16H320c0-44.2-35.8-80-80-80H176c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V160H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
             </svg>
-            <a href="#">Ingresa</a>
+            <a href="/login">Ingresa</a>
             <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                 viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
@@ -67,53 +69,21 @@
 
     </header>
 
+    <h2>Login de Usuario</h2>
+    <form action="/login.html" method="post">
 
-    <h2>Registro de Usuario</h2>
-    <form action="#" method="post">
-        <label for="nombre">Nombre y Apellido:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <!-- Nombre de Usuario -->
+        <label for="username">Nombre de usuari@:</label>
+        <input type="text" id="username" name="username" required minlength="3" maxlength="50">
+        <br><br>
 
-        <label for="usuario">Nombre de usuario:</label>
-        <input type="text" id="usuario" name="usuario" required><br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
-
-        <label for="domicilio">Domicilio:</label>
-        <input type="text" id="domicilio" name="domicilio" required><br><br>
-
-        <label for="perfil">Perfil del Usuario:</label>
-        <select id="perfil" name="perfil" required>
-            <option value="comprar">Comprar</option>
-            <option value="vender">Vender</option>
-        </select><br><br>
-
-        <label>Categorías de Interés:</label><br>
-        <input type="checkbox" id="electro" name="intereses" value="electro">
-        <label for="electro">Electro</label><br>
-        <input type="checkbox" id="moda" name="intereses" value="moda">
-        <label for="moda">Moda</label><br>
-        <input type="checkbox" id="hogar" name="intereses" value="hogar">
-        <label for="hogar">Hogar</label><br>
-        <input type="checkbox" id="jugueteria" name="intereses" value="jugueteria">
-        <label for="jugueteria">Juguetería</label><br>
-        <input type="checkbox" id="vida_sana" name="intereses" value="vida_sana">
-        <label for="vida_sana">Vida Sana</label><br><br>
-
-        <label for="foto">Foto de Usuario:</label>
-        <input type="file" id="foto" name="foto" accept="image/*"><br><br>
-
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
-
-        <label for="confirmar_contrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br><br>
+        <br><br>
 
         <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
     </form>
+
 </body>
 </html>
