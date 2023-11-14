@@ -11,8 +11,6 @@ body {
 /*------------------------------------------------------------------------------------------------------------------------------
                                   HEADER
 -------------------------------------------------------------------------------------------------------------------------------*/
-
-
 /* Estilos Generales */
 nav ul {
     list-style: none;
@@ -154,6 +152,39 @@ nav a {
     height: auto;
 }
 
+.footer-main {
+    text-align: center;
+    display: column;
+}
+
+.footer-info {
+    width: 100%;
+    display: flex;
+}
+
+.footer-cell {
+    align-items: center;
+    display: column;
+}
+
+b {
+    font-weight: bold;
+}
+
+p {
+    margin: 10px;
+}
+
+.copyright {
+    text-align: left;
+}
+
+.blue-icon {
+    font-size: 2em;
+    color: blue;
+    margin-bottom: 10px;
+}
+
 
 /* Estilos para la versión tablet (dos artículos por fila) */
 @media (min-width: 768px) {
@@ -244,7 +275,7 @@ h2 {
 }
 
 /* Estilos para el formulario de login */
-form {
+main form {
     max-width: 300px;
     margin: 20px auto;
     text-align: center;
@@ -268,6 +299,7 @@ input {
     box-sizing: border-box;
 }
 
+input[type="button"],
 input[type="submit"] {
     background-color: #096bd3;
     color: #fff;
@@ -277,6 +309,8 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+
+input[type="button"]:hover,
 input[type="submit"]:hover {
     background-color: #0a57a9;
 }

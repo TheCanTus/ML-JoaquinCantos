@@ -182,7 +182,8 @@ nav a {
     display: flex;
     align-items: center;
 }
-.product{
+
+.product {
     position: relative;
 }
 
@@ -241,6 +242,17 @@ nav a {
 
 .footer-main {
     text-align: center;
+    display: column;
+}
+
+.footer-info {
+    width: 100%;
+    display: flex;
+}
+
+.footer-cell {
+    align-items: center;
+    display: column;
 }
 
 b {
@@ -248,7 +260,7 @@ b {
 }
 
 p {
-    margin: 10px; 
+    margin: 10px;
 }
 
 .copyright {
@@ -256,8 +268,9 @@ p {
 }
 
 .blue-icon {
-    font-size: 24px;
+    font-size: 2em;
     color: blue;
+    margin-bottom: 10px;
 }
 
 /* Estilos para la versión tablet (dos artículos por fila) */

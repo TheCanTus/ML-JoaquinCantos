@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/register.css">
     <title>Registro</title>
 </head>
+
 <body>
 
     <header class="navbar">
@@ -14,14 +16,18 @@
             <img src="/images/logo-mercado-liebre.svg" alt="Mercado Liebre Logo" class="logo-banner">
         </span>
         <div class="search-container">
-            <span class="search-bar">
-                <input type="text" placeholder="Buscar productos...">
-                <button><svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                    </svg></button>
-            </span>
+            <form action="/buscar" method="get">
+                <span class="search-bar">
+                    <input type="text" name="q" placeholder="Buscar productos...">
+                    <button type="submit">
+                        <button><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg></button>
+                    </button>
+                </span>
+            </form>
         </div>
         <div class="cta">
             <!-- <i class="fa-solid fa-hand-holding-dollar"></i> -->
@@ -51,7 +57,7 @@
                 <path
                     d="M528 160V416c0 8.8-7.2 16-16 16H320c0-44.2-35.8-80-80-80H176c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V160H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
             </svg>
-            <a href="#">Ingresa</a>
+            <a href="/login">Ingresa</a>
             <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                 viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
@@ -67,7 +73,7 @@
 
     </header>
 
-
+<main>
     <h2>Registro de Usuario</h2>
     <form action="#" method="post">
         <label for="nombre">Nombre y Apellido:</label>
@@ -80,7 +86,7 @@
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required title="Ingrese una fecha de nacimiento válida"><br><br>        
 
         <label for="domicilio">Domicilio:</label>
         <input type="text" id="domicilio" name="domicilio" required><br><br>
@@ -107,13 +113,49 @@
         <input type="file" id="foto" name="foto" accept="image/*"><br><br>
 
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
+        <input type="password" id="contrasena" name="contrasena" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número"><br><br>        
 
         <label for="confirmar_contrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br><br>
-
+        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe coincidir con la contraseña original"><br><br>
+        
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
+        <a href="/"> 
+            <input type="button" value="Home">
+        </a>
     </form>
+</main>
+    <footer class="footer-main">
+        <div class="footer-info">
+            <div class="footer-cell">
+                <i class="fas fa-credit-card blue-icon"></i>
+                <br>
+                <b>Pagá con tarjeta o en efectivo</b>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y
+                    siempre es
+                    seguro!</p>
+            </div>
+            <div class="footer-cell">
+                <i class="fas fa-gift blue-icon"></i>
+                <br>
+                <b>Envío gratis desde $2,500</b>
+                <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un
+                    beneficio de
+                    Mercado Puntos.</p>
+            </div>
+            <div class="footer-cell">
+                <i class="fas fa-user-shield blue-icon"></i>
+                <br>
+                <b>Seguridad, de principio a fin</b>
+                <p>¿No te gusta? ¡Devuélvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre
+                    protegido.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

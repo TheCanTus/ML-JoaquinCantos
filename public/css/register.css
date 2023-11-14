@@ -86,7 +86,7 @@ nav a {
     background: none;
     border: none;
     font-size: 22px;
-    color: #666;
+    color: #000000;
     line-height: 1em;
     border-radius: 0 2px 2px 0;
     width: 46px;
@@ -145,7 +145,7 @@ nav a {
 }
 
 /* Estilos para el formulario de registro */
-form {
+main form {
     max-width: 400px;
     margin: 20px auto;
     text-align: left;
@@ -189,6 +189,7 @@ form input[type="file"] {
 }
 
 /* Estilo para los botones */
+form input[type="button"],
 form input[type="submit"],
 form input[type="reset"] {
     background-color: #096bd3;
@@ -218,6 +219,41 @@ form input[type="checkbox"] {
     width: auto;
     margin-bottom: 0;
 }
+
+
+.footer-main {
+    text-align: center;
+    display: column;
+}
+
+.footer-info {
+    width: 100%;
+    display: flex;
+}
+
+.footer-cell {
+    align-items: center;
+    display: column;
+}
+
+b {
+    font-weight: bold;
+}
+
+p {
+    margin: 10px;
+}
+
+.copyright {
+    text-align: left;
+}
+
+.blue-icon {
+    font-size: 2em;
+    color: blue;
+    margin-bottom: 10px;
+}
+
 
 /* Estilos para la versión tablet*/
 @media (min-width: 768px) {
